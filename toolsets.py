@@ -85,6 +85,9 @@ _HERMES_CORE_TOOLS = [
     "kanban_attach", "kanban_attach_url", "kanban_attachments",
     # Computer use (macOS, gated on cua-driver being installed via check_fn)
     "computer_use",
+    # EDA hardware design, simulation, and verification tools
+    "eda_simulate", "eda_cocotb", "eda_mine_log",
+    "eda_inspect_vcd", "eda_verification_loop", "eda_job_status",
 ]
 
 # Webhook events may originate from untrusted third-party content (for example,
@@ -102,6 +105,19 @@ _HERMES_WEBHOOK_SAFE_TOOLS = [
 # These can include individual tools or reference other toolsets
 TOOLSETS = {
     # Basic toolsets - individual tool categories
+    "eda": {
+        "description": "Hardware design, RTL simulation, cocotb testbenches, Drain3 log mining, and VCD waveform inspection tools",
+        "tools": [
+            "eda_simulate",
+            "eda_cocotb",
+            "eda_mine_log",
+            "eda_inspect_vcd",
+            "eda_verification_loop",
+            "eda_job_status",
+        ],
+        "includes": []
+    },
+
     "web": {
         "description": "Web research and content extraction tools",
         "tools": ["web_search", "web_extract"],

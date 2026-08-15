@@ -1,0 +1,12 @@
+name: eda_tools
+version: "0.1.0"
+description: "EDA Verification & Design Assistant tools and context engine plugin for Hermes"
+author: "Antigravity DeepMind Team"
+kind: "standalone"
+provides_tools:
+  - eda_run_sim
+  - eda_check_status
+  - eda_analyze_failures
+provides_hooks:
+  - pre_tool_call
+  - post_tool_call

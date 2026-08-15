@@ -427,6 +427,9 @@ class RelayHostRegistry:
                 return host
             try:
                 host = RelayRuntime(profile_key=key)
+            except ImportError as exc:
+                logger.debug(f"Hermes Relay not available: {exc}")
+                host = NoopRelayRuntime(profile_key=key, reason=str(exc))
             except Exception as exc:
                 logger.warning(
                     "Hermes Relay runtime initialization failed", exc_info=True

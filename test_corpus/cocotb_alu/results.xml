@@ -1,0 +1,7 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1786800840" />
+    <testcase name="alu_add_test" classname="test_alu" file="/home/virtual/chipship/test_corpus/cocotb_alu/test_alu.py" lineno="11" time="0.0008881092071533203" sim_time_ns="31.0" ratio_time="34905.61718120805" />
+    <testcase name="alu_xor_test" classname="test_alu" file="/home/virtual/chipship/test_corpus/cocotb_alu/test_alu.py" lineno="34" time="0.0008389949798583984" sim_time_ns="20.999999999999996" ratio_time="25029.947144075017" />
+  </testsuite>
+</testsuites>

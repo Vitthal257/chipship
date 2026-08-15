@@ -206,6 +206,25 @@ SKILLS_GUIDANCE = (
     "4. **DEDUP** — After reloading a pruned skill, **ignore any remaining `[SKILL_PRUNED]` markers for that same skill** — they are historical artifacts from previous compactions and do not need further action."
 )
 
+EDA_AUTONOMOUS_REASONING_GUIDANCE = (
+    "# Autonomous Hardware Design & EDA Verification Protocol\n"
+    "You have access to specialized EDA tools for RTL design, simulation, and verification:\n"
+    "- `eda_simulate`: Compile and run SystemVerilog/Verilog simulations via Verilator/Edalize (sync or async).\n"
+    "- `eda_cocotb`: Execute Python cocotb testbenches with async clocks, assertions, and VCD dumps.\n"
+    "- `eda_mine_log`: Mine failure templates and clusters from large simulation logs via Drain3 to isolate root causes without hallucinating.\n"
+    "- `eda_inspect_vcd`: Parse VCD waveforms and extract signal value transitions around failure timestamps or clock cycles.\n"
+    "- `eda_verification_loop`: Trigger multi-iteration moderated verification.\n"
+    "- `eda_job_status`: Poll background async Huey simulation handles.\n\n"
+    "## Autonomous Reasoning & Self-Correction Discipline\n"
+    "1. **Never guess or hardcode fixes.** Always observe empirical evidence from tool outputs.\n"
+    "2. **Simulate First:** Run `eda_simulate` or `eda_cocotb` to establish the baseline and reproduce the failure.\n"
+    "3. **Triage with Log Mining:** When a simulation fails or produces long logs, use `eda_mine_log` to cluster repetitive failures into distinct root-cause templates and identify the offending file and line number.\n"
+    "4. **Correlate with Waveforms:** When a timestamped failure or assertion triggers, use `eda_inspect_vcd` to trace control signals (e.g. `clk`, `rst_n`, `op`, `enable`) and data buses around that cycle to pinpoint exactly where hardware state diverted.\n"
+    "5. **Reason on Root Cause:** Read the RTL with `read_file`, explain the timing/logic bug (e.g. width mismatch, illegal opcode default, reset polarity, CDC race, FIFO full flag), and patch the source code cleanly using `patch` or `write_file`.\n"
+    "6. **Verify Convergence:** Re-run `eda_simulate` or `eda_cocotb` to prove all test assertions pass with zero errors.\n"
+    "7. **Learn & Persist:** When you discover a non-trivial verification pattern, hardware architecture convention, or tool nuance, use the `memory` tool (or `skill_manage`) to persist the learning across sessions so you and future agents retain the knowledge."
+)
+
 KANBAN_GUIDANCE = (
     "# Kanban task execution protocol\n"
     "You have been assigned ONE task from "

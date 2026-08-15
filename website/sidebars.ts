@@ -219,6 +219,19 @@ const sidebars: SidebarsConfig = {
                 },
                 {
                   type: 'category',
+                  label: 'hardware-design',
+                  key: 'skills-bundled-hardware-design',
+                  collapsed: true,
+                  items: [
+                    'user-guide/skills/bundled/hardware-design/hardware-design-cocotb-python-verification',
+                    'user-guide/skills/bundled/hardware-design/hardware-design-drain3-eda-log-mining',
+                    'user-guide/skills/bundled/hardware-design/hardware-design-eda-verification-loop',
+                    'user-guide/skills/bundled/hardware-design/hardware-design-vcd-waveform-analysis',
+                    'user-guide/skills/bundled/hardware-design/hardware-design-verilator-edalize-simulation',
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'media',
                   key: 'skills-bundled-media',
                   collapsed: true,

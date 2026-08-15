@@ -69,6 +69,16 @@ If a skill is missing from this list but present in the repo, the catalog is reg
 | [`github-pr-workflow`](/docs/user-guide/skills/bundled/github/github-github-pr-workflow) | GitHub PR lifecycle: branch, commit, open, CI, merge. | `github/github-pr-workflow` |
 | [`github-repo-management`](/docs/user-guide/skills/bundled/github/github-github-repo-management) | Clone/create/fork repos; manage remotes, releases. | `github/github-repo-management` |
 
+## hardware-design
+
+| Skill | Description | Path |
+|-------|-------------|------|
+| [`cocotb-python-verification`](/docs/user-guide/skills/bundled/hardware-design/hardware-design-cocotb-python-verification) | Execute Python cocotb testbenches and verify RTL. | `hardware-design/cocotb-python-verification` |
+| [`drain3-eda-log-mining`](/docs/user-guide/skills/bundled/hardware-design/hardware-design-drain3-eda-log-mining) | Mine failure templates from large EDA simulation logs. | `hardware-design/drain3-eda-log-mining` |
+| [`eda-verification-loop`](/docs/user-guide/skills/bundled/hardware-design/hardware-design-eda-verification-loop) | Run closed-loop EDA regression, diagnosis, and patching. | `hardware-design/eda-verification-loop` |
+| [`vcd-waveform-analysis`](/docs/user-guide/skills/bundled/hardware-design/hardware-design-vcd-waveform-analysis) | Parse VCD waveforms and inspect signal transitions. | `hardware-design/vcd-waveform-analysis` |
+| [`verilator-edalize-simulation`](/docs/user-guide/skills/bundled/hardware-design/hardware-design-verilator-edalize-simulation) | Run Verilator and Edalize multi-backend simulations. | `hardware-design/verilator-edalize-simulation` |
+
 ## media
 
 | Skill | Description | Path |
